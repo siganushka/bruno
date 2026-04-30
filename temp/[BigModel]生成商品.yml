@@ -1,0 +1,55 @@
+info:
+  name: "[BigModel]生成商品"
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: https://open.bigmodel.cn/api/paas/v4/chat/completions
+  body:
+    type: json
+    data: |-
+      {
+        "model": "GLM-4-Flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "随机生成 10 条电商网站中【生鲜类】的商品信息，要中文并以 JSON 格式返回给我"
+          },
+          {
+            "role": "user",
+            "content": "name 为产品名称，也是网站中的销售标题"
+          },
+          {
+            "role": "user",
+            "content": "summary 为产品简介，简短的一句话介绍"
+          },
+          {
+            "role": "user",
+            "content": "options 为产品的规格选项，生成 1-3 个即可"
+          },
+          {
+            "role": "user",
+            "content": "variants 为产品的库存规格（也叫变体），数量为规格选项值的组合，价格单位为：分"
+          },
+          {
+            "role": "user",
+            "content": "示例（此示例为服装类，不同类别请生成对应的规格选项）：{\"name\":\"春季新品男士卫衣\",\"summary\":\"时尚休闲，舒适百搭\",\"options\":[{\"name\":\"颜色\",\"values\":[\"黑\",\"白\",\"红\"]},{\"name\":\"尺码\",\"values\":[\"S\",\"M\",\"L\"]}],\"variants\":[{\"name\":\"黑\\\\/S\",\"price\":99},{\"name\":\"黑\\\\/M\",\"price\":99},{\"name\":\"黑\\\\/L\",\"price\":99},{\"name\":\"白\\\\/S\",\"price\":99},{\"name\":\"白\\\\/M\",\"price\":99},{\"name\":\"白\\\\/L\",\"price\":99},{\"name\":\"红\\\\/S\",\"price\":99},{\"name\":\"红\\\\/M\",\"price\":99},{\"name\":\"红\\\\/L\",\"price\":99}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_object"
+        },
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+  auth:
+    type: bearer
+    token: 60545c66c6eb46438971fd58f340fe57.SUQCT3Bb9JmEVgVv
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

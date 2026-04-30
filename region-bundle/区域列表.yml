@@ -5,11 +5,12 @@ info:
 
 http:
   method: GET
-  url: "{{host}}/api/regions?parent=6101"
+  url: "{{host}}/api/regions"
   params:
     - name: parent
       value: "6101"
       type: query
+      disabled: true
   auth: inherit
 
 settings:

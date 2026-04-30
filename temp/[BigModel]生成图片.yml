@@ -1,0 +1,24 @@
+info:
+  name: "[BigModel]生成图片"
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://open.bigmodel.cn/api/paas/v4/images/generations
+  body:
+    type: json
+    data: |-
+      {
+        "model": "glm-image",
+        "prompt": "帮我生成一张电商网站使用的【泰国进口龙眼】的商品封面图，要那种淡灰色背景，有质感的效果，图片上不要有文字"
+      }
+  auth:
+    type: bearer
+    token: 60545c66c6eb46438971fd58f340fe57.SUQCT3Bb9JmEVgVv
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
