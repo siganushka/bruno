@@ -1,0 +1,19 @@
+info:
+  name: 删除文件
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{host}}/api/media/:hash"
+  params:
+    - name: hash
+      value: cebf23ce25ec96cbb115916a3534b889
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

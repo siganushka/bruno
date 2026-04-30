@@ -1,0 +1,4 @@
+name: DEV
+variables:
+  - name: host
+    value: http://f1.example.com

@@ -1,0 +1,19 @@
+info:
+  name: 文件详情
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{host}}/api/media/:hash"
+  params:
+    - name: hash
+      value: cbb907cf59680969b52bfdae6564636f
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
