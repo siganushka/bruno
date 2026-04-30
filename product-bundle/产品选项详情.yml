@@ -1,0 +1,25 @@
+info:
+  name: 产品选项详情
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{host}}/api/product-options/:id"
+  params:
+    - name: id
+      value: "3"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "name": "foo"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

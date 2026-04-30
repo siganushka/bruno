@@ -1,0 +1,27 @@
+info:
+  name: 添加产品
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{host}}/api/products"
+  body:
+    type: json
+    data: |-
+      {
+        "img": "0ef5f2c657fa1b7e95549aa8f86d5650",
+        "name": "测试产品",
+        "summary": "测试简介",
+        "variants": {
+          "price": 100,
+          "stock": 100
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

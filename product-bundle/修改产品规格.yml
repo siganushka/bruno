@@ -1,0 +1,29 @@
+info:
+  name: 修改产品规格
+  type: http
+  seq: 8
+
+http:
+  method: PUT
+  url: "{{host}}/api/products/:id/variants"
+  params:
+    - name: id
+      value: "2"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "variants": [
+          { "price": 199, "stock": 100, "enabled": true },
+          { "price": 199, "stock": 100, "enabled": true },
+          { "price": 199, "stock": 100, "enabled": true }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

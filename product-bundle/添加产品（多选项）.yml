@@ -1,0 +1,31 @@
+info:
+  name: 添加产品（多选项）
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{host}}/api/products?combinable=true"
+  params:
+    - name: combinable
+      value: "true"
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "img": "0ef5f2c657fa1b7e95549aa8f86d5650",
+        "name": "测试产品",
+        "summary": "测试简介",
+        "options": [
+          { "name": "颜色", "values": "黑,白,红" },
+          { "name": "尺码", "values": "S,M,L" }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

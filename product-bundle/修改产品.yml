@@ -1,0 +1,31 @@
+info:
+  name: 修改产品
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{host}}/api/products/:id"
+  params:
+    - name: id
+      value: "2"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "img": "0ef5f2c657fa1b7e95549aa8f86d5650",
+        "name": "测试产品222",
+        "summary": "测试简介222",
+        "options": [
+          { "name": "颜色", "values": "黑,白,红,蓝" },
+          { "name": "尺码", "values": "S,M,L" }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
