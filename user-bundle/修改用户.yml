@@ -1,0 +1,29 @@
+info:
+  name: 修改用户
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{host}}/api/users/:id"
+  params:
+    - name: id
+      value: "4"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "identifier": "wangmazi2",
+        "password": {
+          "first": "111111",
+          "second": "111111"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

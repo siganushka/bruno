@@ -1,0 +1,25 @@
+info:
+  name: 修改订单
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{host}}/api/orders/:number"
+  params:
+    - name: number
+      value: "261390911782"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "note": "test"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

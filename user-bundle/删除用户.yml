@@ -1,0 +1,19 @@
+info:
+  name: 删除用户
+  type: http
+  seq: 8
+
+http:
+  method: DELETE
+  url: "{{host}}/api/users/:id"
+  params:
+    - name: id
+      value: "4"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

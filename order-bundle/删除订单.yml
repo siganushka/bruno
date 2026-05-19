@@ -1,0 +1,19 @@
+info:
+  name: 删除订单
+  type: http
+  seq: 8
+
+http:
+  method: DELETE
+  url: "{{host}}/api/orders/:number"
+  params:
+    - name: number
+      value: "261390911782"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

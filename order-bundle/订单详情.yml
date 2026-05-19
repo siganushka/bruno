@@ -1,0 +1,19 @@
+info:
+  name: 订单详情
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{host}}/api/orders/:number"
+  params:
+    - name: number
+      value: "261390911782"
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

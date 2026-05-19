@@ -1,0 +1,24 @@
+info:
+  name: 创建订单
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{host}}/api/orders"
+  body:
+    type: json
+    data: |-
+      {
+        "items": [
+          { "subject": 109, "quantity": 1 }
+        ],
+        "note": "订单备注"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
