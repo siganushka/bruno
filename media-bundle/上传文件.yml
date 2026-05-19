@@ -15,7 +15,7 @@ http:
       - name: file
         type: file
         value:
-          - C:\Users\Administrator\AppData\Local\Programs\Bruno\Uninstall Bruno.exe
+          - D:\Backup\Documents\Downloads\2.png
   auth: inherit
 
 settings:

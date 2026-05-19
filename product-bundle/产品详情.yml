@@ -8,7 +8,7 @@ http:
   url: "{{host}}/api/products/:id"
   params:
     - name: id
-      value: "1"
+      value: "10"
       type: path
   auth: inherit
 
