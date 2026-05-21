@@ -14,7 +14,7 @@ http:
     type: json
     data: |-
       {
-        "img": "7e83b01e5fda83a390afb8600a280617",
+        "img": "e39d3865a78d1ff8e053fb665474cf23",
         "name": "测试产品",
         "summary": "测试简介",
         "options": [
