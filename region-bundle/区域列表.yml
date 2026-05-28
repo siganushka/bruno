@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{host}}/api/regions"
+  url: "{{host}}/rest/regions"
   params:
     - name: parent
       value: "6101"

@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{host}}/api/regions/:code"
+  url: "{{host}}/rest/regions/:code"
   params:
     - name: code
       value: "610111"

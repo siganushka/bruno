@@ -5,7 +5,7 @@ info:
 
 http:
   method: DELETE
-  url: "{{host}}/api/media/:hash"
+  url: "{{host}}/rest/media/:hash"
   params:
     - name: hash
       value: cebf23ce25ec96cbb115916a3534b889

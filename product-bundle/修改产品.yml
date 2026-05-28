@@ -5,7 +5,7 @@ info:
 
 http:
   method: PUT
-  url: "{{host}}/api/products/:id"
+  url: "{{host}}/rest/products/:id"
   params:
     - name: id
       value: "2"

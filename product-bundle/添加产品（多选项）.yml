@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{host}}/api/products?combinable=true"
+  url: "{{host}}/rest/products?combinable=true"
   params:
     - name: combinable
       value: "true"

@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{host}}/api/media"
+  url: "{{host}}/rest/media"
   body:
     type: multipart-form
     data:

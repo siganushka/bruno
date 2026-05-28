@@ -1,14 +1,14 @@
 info:
-  name: 用户登录历史
+  name: 交易详情
   type: http
-  seq: 10
+  seq: 3
 
 http:
   method: GET
-  url: "{{host}}/rest/users/:id/logins"
+  url: "{{host}}/rest/transactions/:number"
   params:
-    - name: id
-      value: "2"
+    - name: number
+      value: "899895110061627978"
       type: path
   auth: inherit
 
