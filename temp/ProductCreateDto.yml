@@ -1,22 +1,21 @@
 info:
-  name: 添加产品
+  name: ProductCreateDto
   type: http
-  seq: 2
+  seq: 6
 
 http:
   method: POST
-  url: "{{host}}/rest/products"
+  url: http://f1.example.com/products/test
   body:
     type: json
     data: |-
       {
-        "img": "e39d3865a78d1ff8e053fb665474cf23",
-        "name": "测试产品",
+        "img": "6e041d9d0fdc79b37f029c4eb948953e",
+        "name": "测试名称",
         "summary": "测试简介",
-        "variants": {
-          "price": 100,
-          "stock": 999
-        }
+        "options": [
+          { "foo": 1 }
+        ]
       }
   auth: inherit
 

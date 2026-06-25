@@ -1,7 +1,7 @@
 info:
   name: "[Xiaomi]产品详情"
   type: http
-  seq: 11
+  seq: 5
 
 http:
   method: GET

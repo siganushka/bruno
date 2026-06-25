@@ -11,7 +11,7 @@ http:
     data: |-
       {
         "items": [
-          { "subject": 109, "quantity": 1 }
+          { "subject": 51, "quantity": 10 }
         ],
         "note": "订单备注"
       }

@@ -1,7 +1,7 @@
 info:
   name: "[BigModel]生成图片"
   type: http
-  seq: 2
+  seq: 1
 
 http:
   method: POST

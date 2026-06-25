@@ -16,6 +16,7 @@ http:
         type: file
         value:
           - D:\Backup\Documents\Downloads\2.png
+        contentType: image/png
   auth: inherit
 
 settings:

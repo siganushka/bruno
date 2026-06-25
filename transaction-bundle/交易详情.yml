@@ -5,10 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{host}}/rest/transactions/:number"
+  url: "{{host}}/rest/payments/:number"
   params:
     - name: number
-      value: "899895110061627978"
+      value: "903119068604645900"
       type: path
   auth: inherit
 

@@ -5,7 +5,20 @@ info:
 
 http:
   method: GET
-  url: "{{host}}/rest/transactions"
+  url: "{{host}}/rest/payments"
+  params:
+    - name: gateway
+      value: alipay_page
+      type: query
+      disabled: true
+    - name: state
+      value: cancelled
+      type: query
+      disabled: true
+    - name: dtype
+      value: paymentorder
+      type: query
+      disabled: true
   auth: inherit
 
 settings:

@@ -1,0 +1,39 @@
+info:
+  name: "[BigModel]生成公司简介"
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://open.bigmodel.cn/api/paas/v4/chat/completions
+  body:
+    type: json
+    data: |-
+      {
+        "model": "GLM-4-Flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "帮我生成以下公司的简介，要从网络上查找真实的简介，不要随意生在，要中英文并以 JSON 格式返回给我，id 要对应起来，示例：[{id: 1, zh: \"中文简介\", en: \"英文简介\"}, ...]"
+          },
+          {
+            "role": "user",
+            "content": "{id: 1, name: \"孝感市尚丽儿童用品有限公司\"}"
+          }
+        ],
+        "response_format": {
+          "type": "json_object"
+        },
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

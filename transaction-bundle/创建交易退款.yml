@@ -1,0 +1,26 @@
+info:
+  name: 创建交易退款
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{host}}/rest/payments/:number/refunds"
+  params:
+    - name: number
+      value: "910006481586086972"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "amount": 10,
+        "note": "test note"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

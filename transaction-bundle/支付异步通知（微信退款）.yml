@@ -1,0 +1,30 @@
+info:
+  name: 支付异步通知（微信退款）
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{host}}/rest/payments/:gateway/notify"
+  params:
+    - name: gateway
+      value: wxpay_jsapi
+      type: path
+  body:
+    type: xml
+    data: |-
+      <xml>
+         <return_code>SUCCESS</return_code>
+         <appid><![CDATA[wx8888888888888888]]></appid>
+         <mch_id><![CDATA[1900000109]]></mch_id>
+         <nonce_str><![CDATA[5K8264ILTKCH16CQ2502SI8ZNMTM67VS]]></nonce_str>
+         <req_info><![CDATA[T87GAHG17TGAHG1TGHAHAHA1Y1CIOA9UGJH1GAHV871HAGAGQYQQPOOJMXNBCXBVNMNMAJAA]]></req_info>
+         <return_msg><![CDATA[90]]></return_msg>
+      </xml>
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

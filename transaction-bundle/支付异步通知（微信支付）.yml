@@ -1,0 +1,40 @@
+info:
+  name: 支付异步通知（微信支付）
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{host}}/rest/payments/:gateway/notify"
+  params:
+    - name: gateway
+      value: wxpay_jsapi
+      type: path
+  body:
+    type: xml
+    data: |-
+      <xml>
+          <appid><![CDATA[wxf708746fdd0486a4]]></appid>
+          <bank_type><![CDATA[BANK_DEBIT]]></bank_type>
+          <cash_fee><![CDATA[990]]></cash_fee>
+          <fee_type><![CDATA[CNY]]></fee_type>
+          <is_subscribe><![CDATA[N]]></is_subscribe>
+          <mch_id><![CDATA[1709544875]]></mch_id>
+          <nonce_str><![CDATA[cba97a6795ba7dcc9d02d55ae35eaf01]]></nonce_str>
+          <openid><![CDATA[ojARc6pRwt3nEJM5YqojEq0xHxkw]]></openid>
+          <out_trade_no><![CDATA[910006481586086972]]></out_trade_no>
+          <result_code><![CDATA[SUCCESS]]></result_code>
+          <return_code><![CDATA[SUCCESS]]></return_code>
+          <sign><![CDATA[71E05629EE621E9F5B6DD6F2DDA8F2A2]]></sign>
+          <time_end><![CDATA[20260609170532]]></time_end>
+          <total_fee>3000</total_fee>
+          <trade_type><![CDATA[NATIVE]]></trade_type>
+          <transaction_id><![CDATA[4200003132202606091482261997]]></transaction_id>
+      </xml>
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

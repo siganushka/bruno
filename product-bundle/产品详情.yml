@@ -8,7 +8,7 @@ http:
   url: "{{host}}/rest/products/:id"
   params:
     - name: id
-      value: "10"
+      value: "1"
       type: path
   auth: inherit
 

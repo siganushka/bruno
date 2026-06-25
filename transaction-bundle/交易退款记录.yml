@@ -1,14 +1,14 @@
 info:
-  name: 订单详情
+  name: 交易退款记录
   type: http
   seq: 4
 
 http:
   method: GET
-  url: "{{host}}/rest/orders/:number"
+  url: "{{host}}/rest/payments/:number/refunds"
   params:
     - name: number
-      value: "261721313247"
+      value: "907816931201290893"
       type: path
   auth: inherit
 

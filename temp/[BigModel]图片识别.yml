@@ -1,0 +1,46 @@
+info:
+  name: "[BigModel]图片识别"
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://open.bigmodel.cn/api/paas/v4/chat/completions
+  body:
+    type: json
+    data: |-
+      {
+        "model": "glm-4.6v",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+                {
+                  "type": "image_url",
+                  "image_url": {
+                    "url": "https://filesb.arab-bee.com/biz/fc/3299cf4efee2.jpg?hash=fc4cc9af894c5ebd2c383ad3c9a5b3ea"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "这是一张电商的商品图片，帮我提取图片中的物品是什么，要尽可能精简的（最短 2 个字）关键字即可，最终返回{ zh: “中文关键字”, en: “英文关键字” } 这种结构"
+                }
+            ]
+          }
+        ],
+        "response_format": {
+          "type": "json_object"
+        },
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+  auth:
+    type: bearer
+    token: 270bcdfe3fc248bfb65aee3fd1ddeeaa.n0JgzZmuBaAPVAR1
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
