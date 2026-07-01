@@ -1,0 +1,68 @@
+info:
+  name: 支付异步通知（支付宝支付）
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{host}}/rest/payments/:gateway/notify"
+  params:
+    - name: gateway
+      value: alipay_page
+      type: path
+  body:
+    type: form-urlencoded
+    data:
+      - name: sign
+        value: YJHCR3vdmKnTINFZoy6ePE0JjZL9WCEtW/Ah56wdZzD3FSMBPEM12QPZi2l23EOF7RHq6tWWh6xukb9DkdVqCTUAEImrNRCSVb8sFt1amAIA8EEKXLjqLEEVgoKpvp8zAONLTVwllldKiZRxGtoQLjim7479F0rGb3dZacJRjE0G8SBIs0x+YbtXkFXiu89/59b8MTsx6MkRWRhetS2TGxLrbxkM7TNUZHNU5iW1wX9PNPhaQJroCLiD8lmOCgnxeAhB1WFTgTNhXCaMaBcAEmKy6Fbk1hX33nQOqJJXKKU+B6EMT9xSPKAIhKNE+sZMXcfyz4Os7Jz/e2hqZoe6xg==
+      - name: app_id
+        value: "2021005125604839"
+      - name: charset
+        value: UTF-8
+      - name: subject
+        value: ARAB-MALL
+      - name: version
+        value: "1.0"
+      - name: trade_no
+        value: "2026021022001415611457179987"
+      - name: notify_id
+        value: "2026021001222155643015611477642170"
+      - name: seller_id
+        value: "2088051390256214"
+      - name: gmt_create
+        value: 2026-02-10 15:56:30
+      - name: auth_app_id
+        value: "2021005125604839"
+      - name: gmt_payment
+        value: 2026-02-10 15:56:43
+      - name: notify_time
+        value: 2026-02-10 15:56:43
+      - name: notify_type
+        value: trade_status_sync
+      - name: out_trade_no
+        value: "1856724145988825"
+      - name: point_amount
+        value: "0.00"
+      - name: total_amount
+        value: "2.00"
+      - name: trade_status
+        value: TRADE_SUCCESS
+      - name: buyer_open_id
+        value: 061tjG0Ot8n1lr0F2nLQHMFrb-cG6tgwdM68Ffc-2QQ6pk5
+      - name: fund_bill_list
+        value: '[{"amount":"2.00","fundChannel":"ALIPAYACCOUNT"}]'
+      - name: invoice_amount
+        value: "2.00"
+      - name: receipt_amount
+        value: "2.00"
+      - name: merchant_app_id
+        value: "2021005125604839"
+      - name: buyer_pay_amount
+        value: "2.00"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

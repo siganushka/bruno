@@ -6,6 +6,15 @@ info:
 http:
   method: GET
   url: "{{host}}/rest/products"
+  params:
+    - name: lowestPrice
+      value: "500"
+      type: query
+      disabled: true
+    - name: highestPrice
+      value: "1000"
+      type: query
+      disabled: true
   auth: inherit
 
 settings:
