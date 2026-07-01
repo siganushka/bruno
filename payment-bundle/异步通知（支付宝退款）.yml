@@ -1,5 +1,5 @@
 info:
-  name: 支付异步通知（支付宝退款）
+  name: 异步通知（支付宝退款）
   type: http
   seq: 9
 

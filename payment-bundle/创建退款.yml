@@ -1,5 +1,5 @@
 info:
-  name: 创建交易退款
+  name: 创建退款
   type: http
   seq: 5
 

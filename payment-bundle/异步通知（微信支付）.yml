@@ -1,5 +1,5 @@
 info:
-  name: 支付异步通知（微信支付）
+  name: 异步通知（微信支付）
   type: http
   seq: 6
 
